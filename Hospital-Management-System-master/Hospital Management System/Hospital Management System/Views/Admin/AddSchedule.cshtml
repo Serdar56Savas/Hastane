@@ -21,37 +21,37 @@
 
 <h2>Add Schedule</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Schedule.DoctorId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Schedule.DoctorId, new SelectList(Model.Doctors, "Id", "FullName"), "Select Doctor", new {@class = "form-control"})
-                @Html.ValidationMessageFor(model => model.Schedule.DoctorId, "", new {@class = "text-danger"})
+                @Html.DropDownListFor(model => model.Schedule.DoctorId, new SelectList(Model.Doctors, "Id", "FullName"), "Select Doctor", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Schedule.DoctorId, "", new { @class = "text-danger" })
             </div>
         </div>
         @{
             var days = new List<Schedule>
-            {
-                new Schedule {AvailableStartDay = "Monday"},
-                new Schedule {AvailableStartDay = "Tuesday"},
-                new Schedule {AvailableStartDay = "Wednesday"},
-                new Schedule {AvailableStartDay = "Thursday"},
-                new Schedule {AvailableStartDay = "Friday"},
-                new Schedule {AvailableStartDay = "Saturday"},
-                new Schedule {AvailableStartDay = "Sunday"}
-            };
+        {
+            new Schedule {AvailableStartDay = "Monday"},
+            new Schedule {AvailableStartDay = "Tuesday"},
+            new Schedule {AvailableStartDay = "Wednesday"},
+            new Schedule {AvailableStartDay = "Thursday"},
+            new Schedule {AvailableStartDay = "Friday"},
+            new Schedule {AvailableStartDay = "Saturday"},
+            new Schedule {AvailableStartDay = "Sunday"}
+        };
 
             var status = new List<Schedule>
-            {
-                new Schedule {Status = "Active"},
-                new Schedule {Status = "Inactive"}
-            };
+        {
+            new Schedule {Status = "Active"},
+            new Schedule {Status = "Inactive"}
+        };
         }
         <div class="form-group">
             @Html.LabelFor(model => model.Schedule.AvailableStartDay, htmlAttributes: new { @class = "control-label col-md-2" })

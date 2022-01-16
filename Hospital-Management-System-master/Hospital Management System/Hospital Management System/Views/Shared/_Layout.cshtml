@@ -1,35 +1,89 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-    
+
+<!--   [XR&CO'2014], Tue, 22 Oct  -->
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/vendors/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/vendors/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/vendors/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/queries.css">
-    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Layout/resources/img/logo.jpg" />
-    <title>Hospital Management System</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home 1</title>
     
+    <link rel="shortcut icon" type="image/x-icon" href="~/Medicare-Plus-Medical-Health-HTML-Template/images/favicon.png" />
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/process-bar/tox-progress.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/owl-carouse/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/owl-carouse/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/animsition/css/animate.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/mediaelement/mediaelementplayer.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lightgallery.css">
+    <link rel="stylesheet" href="~/Medicare-Plus-Medical-Health-HTML-Template/css/style.css">
 </head>
-    
 <body>
+
+    <!--load page-->
+    <div class="load-page">
+        <div class="sk-wave">
+            <div class="sk-rect sk-rect1"></div>
+            <div class="sk-rect sk-rect2"></div>
+            <div class="sk-rect sk-rect3"></div>
+            <div class="sk-rect sk-rect4"></div>
+            <div class="sk-rect sk-rect5"></div>
+        </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <!-- End mobile menu -->
+
+    <div class="uni-home-1">
+        <div id="wrapper-container" class="site-wrapper-container">
+
+
+
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+      
         
+    </div>
 
-@RenderBody()
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/jquery/jquery-2.0.2.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/process-bar/tox-progress.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/waypoint/jquery.waypoints.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/counterup/jquery.counterup.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/owl-carouse/owl.carousel.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/mediaelement/mediaelement-and-player.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/masonry/masonry.pkgd.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/moment.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datepicker.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datepicker.tr.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/datetimepicker/bootstrap-datetimepicker.fr.js"></script>
 
-     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
-<script src="~/Content/Layout/vendors/js/jquery.waypoints.min.js"></script>
-<script src="~/Content/Layout/resources/js/script.js"></script>
-@RenderSection("scripts", required: false)   
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/picturefill.min.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lightgallery.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-pager.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-autoplay.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-fullscreen.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-zoom.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-hash.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/lightgallery/lg-share.js"></script>
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/plugin/sticky/jquery.sticky.js"></script>
+
+    <script src="~/Medicare-Plus-Medical-Health-HTML-Template/js/main.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
-    
+
+<!--   [XR&CO'2014], Tue, 22 Oct 2019 11:45:22 GMT -->
 </html>
 

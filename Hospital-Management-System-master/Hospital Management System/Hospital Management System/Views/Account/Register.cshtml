@@ -3,7 +3,13 @@
 @{
     ViewBag.Title = "Register";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/style.css">
+</head>
+
+
 <section class="section-form" id="contact">
+    <div align="center"><img src="~/Medicare-Plus-Medical-Health-HTML-Template/images/logo1.png" alt="resim" /></div>
     <div class="row">
         <h2>@ViewBag.Title.</h2>
     </div>
@@ -20,55 +26,55 @@
                         @Html.ValidationSummary("", new { @class = "text-danger" })
                         <div>
                             <label for="name">User Name<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.TextBoxFor(m => m.UserName, new {@placeholder = "User Name", id = "name"})
+                            @Html.TextBoxFor(m => m.UserName, new { @placeholder = "Kullanıcı Adı", id = "name" })
                             @*@Html.ValidationMessageFor(m => m.UserName, "", new {@class = "text-danger"})*@
                         </div>
                         <div>
                             <label for="fname">First Name<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.TextBoxFor(m => m.FirstName, new {@placeholder = "First Name", id = "fname"})
+                            @Html.TextBoxFor(m => m.FirstName, new { @placeholder = "Adı", id = "fname" })
                             @*@Html.ValidationMessageFor(m => m.FirstName, "", new {@class = "text-danger"})*@
                         </div>
                         <div>
                             <label for="lname">Last Name<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.TextBoxFor(m => m.LastName, new {@placeholder = "Last Name", id = "lname"})
+                            @Html.TextBoxFor(m => m.LastName, new { @placeholder = "Soyadı", id = "lname" })
                             @*@Html.ValidationMessageFor(m => m.LastName, "", new {@class = "text-danger"})*@
                         </div>
                         <div>
                             <label for="email">Email<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.TextBoxFor(m => m.Email, new {@placeholder = "Your Email", id = "email"})
+                            @Html.TextBoxFor(m => m.Email, new { @placeholder = "EMail", id = "email" })
                             @*@Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})*@
                         </div>
                         @*@{
-                            var list = new List<RegisterViewModel>
-                            {
-                                new RegisterViewModel {UserRole = "Patient"},
-                                new RegisterViewModel {UserRole = "Doctor"},
-                                new RegisterViewModel {UserRole = "Admin"}
-                            };
-                        }
-                        <div>
-                            <label for="role">User Role</label>
-                            @Html.DropDownListFor(m => m.UserRole, new SelectList(list, "UserRole", "UserRole"), "--Select Role--", new {@id = "role"})
-                            @Html.ValidationMessageFor(m => m.UserRole, "", new {@class = "text-danger"})
-                        </div>*@
+                                var list = new List<RegisterViewModel>
+                                {
+                                    new RegisterViewModel {UserRole = "Patient"},
+                                    new RegisterViewModel {UserRole = "Doctor"},
+                                    new RegisterViewModel {UserRole = "Admin"}
+                                };
+                            }
+                            <div>
+                                <label for="role">User Role</label>
+                                @Html.DropDownListFor(m => m.UserRole, new SelectList(list, "UserRole", "UserRole"), "--Select Role--", new {@id = "role"})
+                                @Html.ValidationMessageFor(m => m.UserRole, "", new {@class = "text-danger"})
+                            </div>*@
                         <div>
                             <label for="password">Password<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.PasswordFor(m => m.Password, new {@placeholder = "Password", id = "password"})
+                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Şifre", id = "password" })
                             @*@Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})*@
                         </div>
 
                         <div>
                             <label for="cpassword">Password<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.PasswordFor(m => m.ConfirmPassword, new {@placeholder = "Confirm Password", id = "cpassword"})
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @placeholder = "Şifreyi Onayla", id = "cpassword" })
                             @*@Html.ValidationMessageFor(m => m.ConfirmPassword, "", new {@class = "text-danger"})*@
                         </div>
-                        <br/>
+                        <br />
                         <p>
-                            @Html.ActionLink("Already a user?", "Login")
+                            @Html.ActionLink("Hesabınız Var mı?", "Login")
                         </p>
                     </div>
                     <div style="text-align: center !important">
-                        <input type="submit" value="Register" class="btn btn-ghost">
+                        <input type="submit" value="Kayıt Ol" class="btn btn-ghost">
                     </div>
                 </div>
             </div>
@@ -76,13 +82,15 @@
 
             </div>
         </div>
-        <div style="text-align: center" class="row">
-            @Html.ActionLink("Back to Home", "Index", "Home")
+        <br />
+        <div style="text-align: center;color:brown" class="row">
+            @Html.ActionLink("AnaSayfaya Dön", "/Index", "Hastane")
         </div>
-   }
+    }
 
 </section>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

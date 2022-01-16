@@ -13,16 +13,16 @@
             </a>
         </li>
         <li class="active">Ambulance</li>
-        <li class="active">Add Ambulance Driver</li>
+        <li class="active">Ambulans Sürücüsü Ekle</li>
     </ol>
 </div>
 
 <h2>Add Ambulance Driver</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -60,7 +60,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="submit" value="Ekle" class="btn btn-success" />
             </div>
         </div>
     </div>

@@ -3,9 +3,12 @@
 @{
     ViewBag.Title = "Log in";
 }
-
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/style.css">
+</head>
 
 <section class="section-form" id="contact">
+    <div align="center"><img src="~/Medicare-Plus-Medical-Health-HTML-Template/images/logo1.png" alt="resim" /></div>
     <div class="row">
         <h2>@ViewBag.Title.</h2>
     </div>
@@ -14,22 +17,22 @@
         @Html.AntiForgeryToken()
         <div class="row">
             <div class="col span-1-of-4">
-            
+
             </div>
             <div class="col span-2-of-4">
                 <div class="plan-box">
                     <div>
                         @Html.ValidationSummary("", new { @class = "text-danger" })
                         <div>
-                            <label for="name">User Name<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.TextBoxFor(m => m.Email, new { @placeholder="UserName", id="name" })
+                            <label for="name">Kullanıcı Adı<span style="color: red; font-weight: bold">*</span></label>
+                            @Html.TextBoxFor(m => m.Email, new { @placeholder = "Kullanıcı Adı", id = "name" })
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                         <div>
-                            <label for="password">Password<span style="color: red; font-weight: bold">*</span></label>
-                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", id = "password" })
+                            <label for="password">Şifre<span style="color: red; font-weight: bold">*</span></label>
+                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Şifre", id = "password" })
                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                            
+
                         </div>
                         <div class="checkbox">
                             @Html.CheckBoxFor(m => m.RememberMe)
@@ -37,28 +40,29 @@
                         </div>
                         <br />
                         <p>
-                            @Html.ActionLink("Forgot your password?", "ForgotPassword", new {@disabled = "disabled"})
+                            @Html.ActionLink("Şifremi Unuttum", "ForgotPassword", new { @disabled = "disabled" })
                         </p>
                         <br />
                         <p>
-                            @Html.ActionLink("Register as a new user", "Register")
+                            @Html.ActionLink("Kayıt Ol", "Register")
                         </p>
                     </div>
-                
+
                     <div style="text-align: center !important">
-                        <input type="submit" value="Log in" class="btn btn-ghost">
+                        <input type="submit" value="Giriş Yap" class="btn btn-ghost">
                     </div>
                 </div>
             </div>
             <div class="col span-1-of-4">
-           
+
             </div>
         </div>
+        <br />
         <div style="text-align: center" class="row">
-            @Html.ActionLink("Back to Home", "Index", "Home")
+            @Html.ActionLink("AnaSayfa", "/Index", "Hastane")
         </div>
     }
-    
+
 </section>
 
 

@@ -2,14 +2,20 @@
 @{
     ViewBag.Title = "Verify";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/style.css">
+</head>
+<body background="https://media.istockphoto.com/vectors/abstract-geometric-medical-cross-shape-medicine-and-science-concept-vector-id940993008?k=20&m=940993008&s=612x612&w=0&h=rCRrrtzkm7aUqbzFf_ov3KF5UWgc_yDu_GAibzmVbWE=">
 
+</body>
 <h2>@ViewBag.Title.</h2>
 
-@using (Html.BeginForm("VerifyCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+@using (Html.BeginForm("VerifyCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
     @Html.AntiForgeryToken()
     @Html.Hidden("provider", @Model.Provider)
     @Html.Hidden("rememberMe", @Model.RememberMe)
-    <h4>Enter verification code</h4>
+    <h4>Kodu Giriniz</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
@@ -28,7 +34,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Submit" />
+            <input type="submit" class="btn btn-default" value="Onayla" />
         </div>
     </div>
 }

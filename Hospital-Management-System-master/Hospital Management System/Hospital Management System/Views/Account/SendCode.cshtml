@@ -2,10 +2,16 @@
 @{
     ViewBag.Title = "Send";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Layout/resources/css/style.css">
+</head>
+<body background="https://media.istockphoto.com/vectors/abstract-geometric-medical-cross-shape-medicine-and-science-concept-vector-id940993008?k=20&m=940993008&s=612x612&w=0&h=rCRrrtzkm7aUqbzFf_ov3KF5UWgc_yDu_GAibzmVbWE=">
 
+</body>
 <h2>@ViewBag.Title.</h2>
 
-@using (Html.BeginForm("SendCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+@using (Html.BeginForm("SendCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
     @Html.AntiForgeryToken()
     @Html.Hidden("rememberMe", @Model.RememberMe)
     <h4>Send verification code</h4>

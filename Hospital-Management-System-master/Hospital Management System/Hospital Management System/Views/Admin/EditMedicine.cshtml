@@ -12,17 +12,17 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Medicine</li>
-        <li class="active">Edit Medicine</li>
+        <li class="active">İlaç</li>
+        <li class="active">İlacı Güncelle</li>
     </ol>
 </div>
 
-<h2>Edit Medicine</h2>
+<h2>İlacı Güncelle</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -62,14 +62,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Update" class="btn btn-success" />
+                <input type="submit" value="Güncelle" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "ListOfMedicine")
+    @Html.ActionLink("Geri Dön", "ListOfMedicine")
 </div>
 
 @section scripts {

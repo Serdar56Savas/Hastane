@@ -24,12 +24,12 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Ambulance.Id)
-        
+
         <div class="form-group">
             @Html.LabelFor(model => model.Ambulance.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -46,10 +46,10 @@
         </div>
         @{
             var list = new List<Ambulance>
-            {
-                new Ambulance {AmbulanceStatus = "Free"},
-                new Ambulance {AmbulanceStatus = "Busy"}
-            };
+        {
+            new Ambulance {AmbulanceStatus = "Free"},
+            new Ambulance {AmbulanceStatus = "Busy"}
+        };
         }
         <div class="form-group">
             @Html.LabelFor(model => model.Ambulance.AmbulanceStatus, htmlAttributes: new { @class = "control-label col-md-2" })

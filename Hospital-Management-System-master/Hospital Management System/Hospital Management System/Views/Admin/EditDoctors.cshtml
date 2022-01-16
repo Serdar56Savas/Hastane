@@ -23,7 +23,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -103,27 +103,27 @@
 
         @{
             var bloodlist = new List<Doctor>
-            {
-                new Doctor {BloodGroup = "A+", Gender = "Male"},
-                new Doctor {BloodGroup = "O+", Gender = "Female"},
-                new Doctor {BloodGroup = "B+", Gender = "Other"},
-                new Doctor {BloodGroup = "AB+"},
-                new Doctor {BloodGroup = "A-"},
-                new Doctor {BloodGroup = "O-"},
-                new Doctor {BloodGroup = "B-"},
-                new Doctor {BloodGroup = "AB-"}
-            };
+        {
+            new Doctor {BloodGroup = "A+", Gender = "Male"},
+            new Doctor {BloodGroup = "O+", Gender = "Female"},
+            new Doctor {BloodGroup = "B+", Gender = "Other"},
+            new Doctor {BloodGroup = "AB+"},
+            new Doctor {BloodGroup = "A-"},
+            new Doctor {BloodGroup = "O-"},
+            new Doctor {BloodGroup = "B-"},
+            new Doctor {BloodGroup = "AB-"}
+        };
             var genderlist = new List<Doctor>
-            {
-                new Doctor {Gender = "Male"},
-                new Doctor {Gender = "Female"},
-                new Doctor {Gender = "Other"}
-            };
+        {
+            new Doctor {Gender = "Male"},
+            new Doctor {Gender = "Female"},
+            new Doctor {Gender = "Other"}
+        };
             var statuslist = new List<Doctor>
-            {
-                new Doctor {Status = "Active"},
-                new Doctor {Status = "Inactive"}
-            };
+        {
+            new Doctor {Status = "Active"},
+            new Doctor {Status = "Inactive"}
+        };
         }
         <div class="form-group">
             @Html.LabelFor(model => model.Doctor.BloodGroup, htmlAttributes: new { @class = "control-label col-md-2" })
