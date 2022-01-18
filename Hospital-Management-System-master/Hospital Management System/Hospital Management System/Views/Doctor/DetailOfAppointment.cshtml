@@ -12,18 +12,18 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Appointment</li>
-        <li class="active">Appointment Detail</li>
+        <li class="active">Randevu</li>
+        <li class="active">Randevu Detayı</li>
     </ol>
 </div>
 
-<h2>Appointment Detail</h2>
+<h2>Randevu Detayı</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Patient Name
+            Hasta Adı
         </dt>
 
         <dd>
@@ -31,7 +31,7 @@
         </dd>
 
         <dt>
-            Doctor Name
+            Doktor Adı
         </dt>
 
         <dd>
@@ -61,24 +61,24 @@
         <dd>
             @if (Model.Status)
             {
-                @("Active")
+            @("Aktif")
             }
             else
             {
-                @("Inactive")
+            @("İnaktif")
             }
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "EditAppointment", new { id = Model.Id }) |
+    @Html.ActionLink("Değiştir", "EditAppointment", new { id = Model.Id }) |
     @if (Model.Status)
     {
-        @Html.ActionLink("Back to List", "ActiveAppointments")
+    @Html.ActionLink("Geri Dön", "ActiveAppointments")
     }
     else
     {
-        @Html.ActionLink("Back to List", "PendingAppointments")
+    @Html.ActionLink("Bekleyen Randevular", "PendingAppointments")
     }
 </p>

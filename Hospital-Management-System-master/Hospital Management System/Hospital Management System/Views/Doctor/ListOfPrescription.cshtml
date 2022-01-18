@@ -12,30 +12,30 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Prescription</li>
-        <li class="active">List of Prescriptions</li>
+        <li class="active">Reçete</li>
+        <li class="active">Reçeteler</li>
     </ol>
 </div>
 
 <h2>List Of Prescription</h2>
 
 <p>
-    @Html.ActionLink("Create New", "AddPrescription", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Reçete Oluştur", "AddPrescription", null, new { @class = "btn btn-primary" })
 </p>
 <table id="table_id" class="table">
     <thead>
-    <tr>
-        <th>
-            Patient UserName
-        </th>
-        <th>
-            Patient Name
-        </th>
-        <th>
-            Date
-        </th>
-        <th>Action</th>
-    </tr>
+        <tr>
+            <th>
+                Hastanın Kullanıcı Adı
+            </th>
+            <th>
+                Hasta Adı
+            </th>
+            <th>
+                Tarih
+            </th>
+            <th>Action</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
@@ -48,7 +48,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PatientName)
                 </td>
-                <td> 
+                <td>
                     @item.PrescriptionAddDate.ToShortDateString()
                 </td>
                 <td>

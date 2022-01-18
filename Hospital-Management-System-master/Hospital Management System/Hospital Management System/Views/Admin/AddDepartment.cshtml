@@ -1,11 +1,9 @@
 ﻿@using Hospital_Management_System.Models
 @model Hospital_Management_System.Models.Department
-
 @{
     ViewBag.Title = "AddDepartment";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 <div class="row">
     <ol class="breadcrumb">
         <li>
@@ -13,13 +11,11 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Department</li>
-        <li class="active">Add Department</li>
+        <li class="active">Departman</li>
+        <li class="active">Departman Ekle</li>
     </ol>
 </div>
-
-<h2>Add Department</h2>
-
+<h2>Departman Ekle</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -34,7 +30,6 @@
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -50,7 +45,6 @@
             new DepartmentStatus {Name = "Inactive"}
         };
         }
-
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -58,19 +52,16 @@
                 @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="submit" value="Oluştur" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
-
 <div>
-    @Html.ActionLink("Back to List", "DepartmentList")
+    @Html.ActionLink("Geri Dön", "DepartmentList")
 </div>
-
 @section scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
